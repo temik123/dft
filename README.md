@@ -42,7 +42,7 @@ git clone <url-репозитория>
 ```
 
 Приложение будет доступно по адресам:
-- Frontend: http://localhost:3000
+- Frontend: http://localhost:1001
 - Backend API: http://localhost:3001
 
 ## Структура проекта
@@ -67,13 +67,13 @@ crm-basic/
 ## Конфигурация
 
 ### База данных
-- **Имя БД**: crm_db
+- **Имя БД**: database
 - **Пользователь**: postgres
 - **Пароль**: password
 - **Порт**: 5432 (стандартный)
 
 ### Порты приложения
-- **Frontend**: 3000
+- **Frontend**: 1001
 - **Backend**: 3001
 
 ## API Endpoints
