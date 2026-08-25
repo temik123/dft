@@ -5,7 +5,7 @@ RUN npm ci
 
 FROM node:25-alpine3.21 as build
 WORKDIR /app
-COPY --from=deps /app/node_modules/ .
+COPY --from=deps /app/node_modules/ ./node_modules
 COPY . .
 RUN npm run build
 
