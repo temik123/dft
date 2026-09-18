@@ -56,6 +56,23 @@ services:
     networks:
       - backend_net
       - frontend_net
+  db_dump:
+    image: db_dump
+    build: 
+      context: ./db_dump
+    container_name: db_dump
+    environment:
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD_DUMB}
+      - DB_USER=${DB_USER_DUMP}
+      - DB_PORT=${DB_DUMP_PORT}
+    volumes:
+      - /var/lib/db_backup_for_docker:/var/lib/backup
+    networks:
+      - backend_net
+    ports:
+      - ${DB_DUMP_PORT}:5433
+    depends_on:
+      - db
 
 networks:
   frontend_net:
